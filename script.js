@@ -1,24 +1,11 @@
-// 1 task
+// 2 task
 
-function getNewColor(){
-  let symbols='0123456789ABCDEF';
-  let color="#"
+const form = document.getElementById('form');
 
-  for(let i=0;i<6;i++){
-    color+=symbols[Math.floor(Math.random()*16)]
-  }
-  return color
-}
+const inputs = [...form.elements].filter(el => el.nodeName === 'INPUT');
 
+inputs.forEach(
+    input => input.value = localStorage.getItem(input.name))
 
-
-
-let btn=document.getElementById("btn")
-btn.addEventListener("click",()=>{
-  document.body.style.background=getNewColor();
-  localStorage.clear()
-  localStorage.setItem('bg', 'getNewColor()')
-  console.log(localStorage)
-})
-
+form.onchange = e => localStorage.setItem(e.target.name, e.target.value);
 

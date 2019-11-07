@@ -1,11 +1,17 @@
-// 2 task
+// 3 task
 
-const form = document.getElementById('form');
+const button=document.getElementById("rem_adds")
+const adds=document.getElementById("adds")
 
-const inputs = [...form.elements].filter(el => el.nodeName === 'INPUT');
+const isCookieExsist = cookie => 
+    !!(document.cookie.match(new RegExp(cookie)));
 
-inputs.forEach(
-    input => input.value = localStorage.getItem(input.name))
+setInterval(() => {
+    isCookieExsist('timeCookie') ?
+        adds.classList.add('hidden') :
+        adds.classList.remove('hidden')
+}, 200)
 
-form.onchange = e => localStorage.setItem(e.target.name, e.target.value);
-
+button.onclick = () => {
+    document.cookie = 'timeCookie=""; max-age=3600';
+}

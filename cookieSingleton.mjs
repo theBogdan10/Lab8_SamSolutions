@@ -16,13 +16,13 @@ const cookieSingleton = {
             this.cookie[name] = cookieValue;
             return cookieValue
         }
-        throw new Error('Nothing was found');
+        throw new Error('Oops.Nothing was found');
     },
     setCookie(name, value){
         if(typeof name !== 'string' || name === ''){
-            throw new Error('Only strings are allowed')
+            throw new Error('Only strings!!!')
         }
-        this.cookie[name] = value;
+        this.cookie[name] = value; 
         document.cookie = `${name}=${value};`
     },
     deleteCookie(name){

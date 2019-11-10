@@ -9,28 +9,28 @@
     <title>Document</title>
 </head>
 <body>
-  
     <div>
-        <h2>document.cookie</h2>
-        <ul id="documentCookies"></ul>
+        <h2>document.cookie</h2><br>
+        <span id="documentCookies"></span>
     </div>
     <div>
-        <h2>cookieSingleton.cookie</h2>
-        <ul id="singletonCookies"></ul>
+        <h2>cookieSingleton.cookie</h2><br>
+        <span id="singletonCookies"></span>
     </div>
     <div>
-        <h2>Controls</h2>
-        <ul id="controls">
-            <li><label>getCookie('<input type="text" placeholder="Name">')<button id='getCookieBtn'>Do it!</button></label></li>
-            <li><label>setCookie(<input type="text" placeholder="Name">, <input type="text" placeholder="Value">)<button id='setCookieBtn'>Do it!</button></label></li>
-            <li><label>deleteCookie(<input type="text" placeholder="Name">)<button id='deleteCookieBtn'>Do it!</button></label></li>
-        </ul>
+        <h2>Input information</h2>
+        
+            <div><label>getCookie('<input type="text" placeholder="Input">')<button id='getCookieBtn'>Enter</button></label></div>
+            <div><label>setCookie(<input type="text" placeholder="Input">, <input type="text" placeholder="Input">)<button id='setCookieBtn'>Enter</button></label></div>
+            <div><label>deleteCookie(<input type="text" placeholder="Input">)<button id='deleteCookieBtn'>Enter</button></label></div>
+        
     </div>
     <div>
         <h2>Info</h2>
         <p id="info"></p>
     </div>
 
+    <script type="module" src="cookieSingleton.mjs"></script>
     <script src="script.js"></script>
 </body>
 </html>

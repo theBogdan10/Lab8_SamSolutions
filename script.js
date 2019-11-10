@@ -1,6 +1,6 @@
 // 4 task
 
-import cookieSingleton from './cookieSingleton.js';
+import cookieSingleton from './cookieSingleton.mjs';
 
 const documentCookies = document.getElementById('documentCookies');
 const singletonCookies = document.getElementById('singletonCookies');
@@ -23,7 +23,7 @@ const fillDocumentCookies = () => {
 const fillSingletonCookies = () => {
     singletonCookies.innerHTML = '';
     for(let name in cookieSingleton.cookie){
-        const li = document.createElement('li');
+        const li = document.createElement('div');
         li.innerHTML = `${name}=${cookieSingleton.cookie[name]}`;
         singletonCookies.appendChild(li)
     }
